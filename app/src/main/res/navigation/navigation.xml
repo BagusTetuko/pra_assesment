@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.d3ifcool.praassesmentbgs.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+    <action
+        android:id="@+id/action_mainFragment_to_persegiFragment"
+        app:destination="@id/persegiFragment" />
+    <action
+        android:id="@+id/action_mainFragment_to_segtigaFragment2"
+        app:destination="@id/segitigaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.d3ifcool.praassesmentbgs.AboutFragment"
+        android:label="AboutFragment"
+        tools:layout="@layout/fragment_about" >
+    </fragment>
+    <fragment
+        android:id="@+id/persegiFragment"
+        android:name="com.d3ifcool.praassesmentbgs.PersegiFragment"
+        android:label="PersegiFragment"
+        tools:layout="@layout/fragment_persegi" >
+        <action
+            android:id="@+id/action_persegiPanjangFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/segitigaFragment"
+        android:name="com.d3ifcool.praassesmentbgs.SegitigaFragment"
+        android:label="SegitigaFragment"
+        tools:layout="@layout/fragment_segitiga" >
+        <action
+            android:id="@+id/action_segtigaFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+</navigation>
